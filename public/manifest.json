@@ -1,0 +1,97 @@
+{
+  "name": "Bible Aura - AI-Powered Spiritual Journey",
+  "short_name": "Bible Aura",
+  "description": "Your AI-powered companion for Bible study, spiritual growth, and divine insights. Access multiple Bible translations, AI explanations, journaling, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e3a8a",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["education", "lifestyle", "books"],
+  "icons": [
+    {
+      "src": "/✦Bible Aura (2).png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/✦Bible Aura (2).png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/✦Bible Aura (2).png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "AI Bible Chat",
+      "short_name": "AI Chat",
+      "description": "Ask AI questions about Bible verses",
+      "url": "/ai-chat",
+      "icons": [
+        {
+          "src": "/✦Bible Aura (2).png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Read Bible",
+      "short_name": "Bible",
+      "description": "Read the Bible with multiple translations",
+      "url": "/bible",
+      "icons": [
+        {
+          "src": "/✦Bible Aura (2).png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Spiritual Journal",
+      "short_name": "Journal",
+      "description": "Write your spiritual thoughts and reflections",
+      "url": "/journal",
+      "icons": [
+        {
+          "src": "/✦Bible Aura (2).png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Study Hub",
+      "short_name": "Study",
+      "description": "Explore topical studies and parables",
+      "url": "/study-hub",
+      "icons": [
+        {
+          "src": "/✦Bible Aura (2).png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "screenshots": [
+    {
+      "src": "/✦Bible Aura (2).png",
+      "type": "image/png",
+      "sizes": "1280x720",
+      "form_factor": "wide",
+      "label": "Bible Aura - AI-Powered Bible Study"
+    }
+  ]
+} 

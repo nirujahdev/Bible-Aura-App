@@ -1,0 +1,228 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    },
+    {
+      "source": "/((?!api|_next|_static|favicon.ico|sitemap.xml|robots.txt|manifest.json|.*\\.).*)",
+      "destination": "/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/chat",
+      "destination": "/bible-ai",
+      "permanent": true
+    },
+    {
+      "source": "/ai-chat",
+      "destination": "/bible-ai",
+      "permanent": true
+    },
+    {
+      "source": "/bible-chatbot",
+      "destination": "/bible-ai",
+      "permanent": true
+    },
+    {
+      "source": "/christian-ai",
+      "destination": "/bible-ai",
+      "permanent": true
+    },
+    {
+      "source": "/scripture-ai",
+      "destination": "/bible-ai",
+      "permanent": true
+    },
+    {
+      "source": "/ai-bible",
+      "destination": "/bible-ai",
+      "permanent": true
+    },
+    {
+      "source": "/biblical-ai",
+      "destination": "/bible-ai",
+      "permanent": true
+    },
+    {
+      "source": "/smart-bible",
+      "destination": "/bible-ai",
+      "permanent": true
+    },
+    {
+      "source": "/bible-ai-assistant",
+      "destination": "/bible-ai",
+      "permanent": true
+    },
+    {
+      "source": "/ai-powered-bible-study",
+      "destination": "/bible-ai",
+      "permanent": true
+    },
+    {
+      "source": "/interactive-bible-study",
+      "destination": "/bible-ai",
+      "permanent": true
+    },
+    {
+      "source": "/biblical-insights-ai",
+      "destination": "/bible-ai",
+      "permanent": true
+    },
+    {
+      "source": "/christian-study-tools",
+      "destination": "/features",
+      "permanent": true
+    },
+    {
+      "source": "/bible-verse-analysis",
+      "destination": "/bible-ai",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/privacy",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=86400"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "index, follow"
+        }
+      ]
+    },
+    {
+      "source": "/privacy.html",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=86400"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "index, follow"
+        }
+      ]
+    },
+    {
+      "source": "/terms",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=86400"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "index, follow"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains; preload"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    },
+    {
+      "source": "/blog-sitemap.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    },
+    {
+      "source": "/manifest.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/manifest+json"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    }
+  ]
+} 

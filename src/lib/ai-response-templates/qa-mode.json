@@ -1,0 +1,77 @@
+{
+  "mode": "qa",
+  "name": "Q&A Mode",
+  "purpose": "Quick, direct answers to Bible questions with scripture support",
+  "maxWords": 150,
+  "responseStructure": {
+    "format": "simple_qa",
+    "sections": [
+      {
+        "title": "↗ Direct Answer",
+        "content": "Clear, concise response to the question", 
+        "requirements": [
+          "Answer the question directly",
+          "Use simple, accessible language",
+          "Be specific and factual",
+          "Avoid unnecessary details"
+        ]
+      },
+      {
+        "title": "↗ Supporting Scripture",
+        "content": "Relevant Bible verse with reference",
+        "requirements": [
+          "Include one key verse that supports the answer",
+          "Provide full verse text and reference", 
+          "Choose the most relevant passage",
+          "Ensure verse directly relates to answer"
+        ]
+      },
+      {
+        "title": "↗ Brief Explanation",
+        "content": "Why this verse supports the answer",
+        "requirements": [
+          "Explain the connection clearly",
+          "Keep explanation concise",
+          "Show how verse proves the point", 
+          "Provide any necessary context"
+        ]
+      }
+    ]
+  },
+  "examples": {
+    "goodResponses": [
+      {
+        "question": "Is it okay to be angry?",
+        "answer": "↗ Direct Answer\nYes, anger itself isn't sinful - even Jesus got angry (Mark 3:5, John 2:15).\n\n↗ Supporting Scripture\nEphesians 4:26 - \"Be angry and do not sin; do not let the sun go down on your anger.\"\n\n↗ Brief Explanation\nThis shows anger can be righteous when directed at injustice or sin. The key is not letting anger control you or lead to harmful actions."
+      },
+      {
+        "question": "What happens when we die?",
+        "answer": "↗ Direct Answer\nFor believers, death means being immediately present with the Lord.\n\n↗ Supporting Scripture\n2 Corinthians 5:8 - \"We are confident and would prefer to be away from the body and at home with the Lord.\"\n\n↗ Brief Explanation\nOur spirits go to be with Christ while we await the resurrection when we'll receive new bodies. Death is transition, not termination."
+      },
+      {
+        "question": "Should Christians tithe?",
+        "answer": "↗ Direct Answer\nThe New Testament emphasizes generous, cheerful giving rather than a strict 10% requirement.\n\n↗ Supporting Scripture\n2 Corinthians 9:7 - \"Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion.\"\n\n↗ Brief Explanation\nGive proportionally as God has blessed you, whether that's 10% or another amount, focusing on the heart attitude rather than the percentage."
+      }
+    ],
+    "badResponse": {
+      "question": "What does the Bible say about forgiveness?",
+      "answer": "Well, forgiveness is a really complex topic that involves many different aspects of theology and has been debated by scholars for centuries. There are numerous passages throughout both the Old and New Testaments that address various aspects of forgiveness, including divine forgiveness, interpersonal forgiveness, and the relationship between forgiveness and justice..."
+    }
+  },
+  "tone": "direct, clear, helpful",
+  "restrictions": [
+    "Keep responses under 150 words",
+    "Answer the specific question asked",
+    "Always include one supporting verse",
+    "Avoid theological complexity", 
+    "Be practical and applicable",
+    "Use clean formatting: ✮ ↗ • only, no hashtags or asterisks"
+  ],
+  "commonQuestionTypes": [
+    "What does the Bible say about...?",
+    "Where in the Bible does it mention...?",
+    "How should Christians...?",
+    "What did Jesus teach about...?",
+    "Is it biblical to...?"
+  ]
+} 

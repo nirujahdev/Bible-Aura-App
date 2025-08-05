@@ -1,0 +1,21 @@
+{
+  "icons": [
+    {
+      "src": "../public/✦Bible Aura (2).png",
+      "sizes": [
+        36,
+        48,
+        72,
+        96,
+        144,
+        192,
+        512
+      ]
+    }
+  ],
+  "splash": {
+    "backgroundColor": "#ffffff",
+    "image": "../public/✦Bible Aura (2).png",
+    "resizeMode": "contain"
+  }
+} 
