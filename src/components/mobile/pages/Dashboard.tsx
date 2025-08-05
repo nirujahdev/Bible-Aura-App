@@ -35,7 +35,7 @@ interface Message {
   model?: string;
 }
 
-// Mobile-optimized quick start prompts (same as laptop version)
+  // Mobile-optimized quick start prompts
 const quickStartPrompts = [
   {
     id: 1,
@@ -75,7 +75,7 @@ const quickStartPrompts = [
   }
 ];
 
-// Mobile-friendly feature cards (same as laptop version)
+  // Mobile-friendly feature cards
 const dashboardFeatures = [
   {
     title: "AI Bible Chat",
@@ -158,7 +158,7 @@ const inspirationalQuotes = [
   }
 ];
 
-// Mock AI function for demo purposes (same as laptop version)
+// Mock AI function for demo purposes
 const getAIInsight = async (prompt: string) => {
   try {
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 1500));
@@ -182,7 +182,7 @@ const MobileDashboard = () => {
   // SEO optimization
   useSEO(SEO_CONFIG.DASHBOARD);
 
-  // State management (same as laptop version)
+  // State management
   const [stats, setStats] = useState<DashboardStats>({
     journalEntries: 0,
     chatConversations: 0,
@@ -197,14 +197,14 @@ const MobileDashboard = () => {
   const [currentQuote, setCurrentQuote] = useState(0);
   const [showSettings, setShowSettings] = useState(false);
 
-  // Load dashboard data (same backend calls as laptop)
+  // Load dashboard data
   useEffect(() => {
     if (user) {
       loadDashboardStats();
     }
   }, [user]);
 
-  // Rotate quotes every 10 seconds (same as laptop)
+  // Rotate quotes every 10 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentQuote((prev) => (prev + 1) % inspirationalQuotes.length);

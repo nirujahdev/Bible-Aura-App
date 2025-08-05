@@ -19,7 +19,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
 import { useSEO, SEO_CONFIG } from '@/hooks/useSEO';
 import EnhancedAIChat from '@/components/EnhancedAIChat';
-import { useDevicePreference } from '@/hooks/useDevicePreference';
+
 
 interface DashboardStats {
   journalEntries: number;
@@ -36,7 +36,7 @@ interface Message {
   model?: string;
 }
 
-// Quick start prompts - works for both laptop and mobile
+    // Quick start prompts
 const quickStartPrompts = [
   {
     id: 1,
@@ -76,7 +76,7 @@ const quickStartPrompts = [
   }
 ];
 
-// Bible Aura features that work for both mobile and laptop
+    // Bible Aura features
 const dashboardFeatures = [
   {
     title: "AI Bible Chat",
@@ -161,11 +161,11 @@ const getAIInsight = async (prompt: string): Promise<string> => {
   return insights[Math.floor(Math.random() * insights.length)] + "\n\n• Trust in His timing\n• Seek His wisdom in prayer\n• He will never leave nor forsake you";
 };
 
-// Main Dashboard Component - Responsive for both laptop and mobile
+    // Main Dashboard Component - Responsive design
 const Dashboard = () => {
   const { user, profile, signOut } = useAuth();
   const { toast } = useToast();
-  const { preference } = useDevicePreference();
+
   
   // SEO optimization
   useSEO(SEO_CONFIG.DASHBOARD);
@@ -246,16 +246,7 @@ const Dashboard = () => {
     }
   };
 
-  // Get device preference indicator
-  const deviceBadge = () => {
-    if (preference?.type === 'desktop') {
-      return <Badge variant="secondary" className="bg-blue-100 text-blue-800">Desktop Experience</Badge>;
-    }
-    if (preference?.type === 'mobile') {
-      return <Badge variant="secondary" className="bg-green-100 text-green-800">Mobile Experience</Badge>;
-    }
-    return null;
-  };
+
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -268,7 +259,7 @@ const Dashboard = () => {
             </div>
             <div>
               <h1 className="text-lg font-bold text-slate-800">Bible Aura</h1>
-              {deviceBadge()}
+
             </div>
           </div>
           

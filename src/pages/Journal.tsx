@@ -42,13 +42,13 @@ interface JournalEntry {
 }
 
 const Journal = () => {
-  // SEO optimization (same as laptop)
+  // SEO optimization
   useSEO(SEO_CONFIG.JOURNAL);
   
   const { user } = useAuth();
   const { toast } = useToast();
   
-  // Core state (same as laptop)
+  // Core state
   const [entries, setEntries] = useState<JournalEntry[]>([]);
   const [selectedEntry, setSelectedEntry] = useState<JournalEntry | null>(null);
   const [loading, setLoading] = useState(false);
@@ -63,7 +63,7 @@ const Journal = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState<'date' | 'title' | 'category'>('date');
 
-  // Load entries (same backend call as laptop)
+  // Load entries
   useEffect(() => {
     if (user) {
       loadEntries();
@@ -121,7 +121,7 @@ const Journal = () => {
         throw error;
       }
       
-      // Ensure data has proper defaults for required fields (same as laptop)
+      // Ensure data has proper defaults for required fields
       const processedData = (data || []).map(entry => ({
         ...entry,
         verse_references: entry.verse_references || [],

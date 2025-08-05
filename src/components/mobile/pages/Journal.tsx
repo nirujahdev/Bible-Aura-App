@@ -52,13 +52,13 @@ interface JournalEntry {
 }
 
 const MobileJournal = () => {
-  // SEO optimization (same as laptop)
+  // SEO optimization
   useSEO(SEO_CONFIG.JOURNAL);
   
   const { user } = useAuth();
   const { toast } = useToast();
   
-  // Core state (same as laptop)
+  // Core state
   const [entries, setEntries] = useState<JournalEntry[]>([]);
   const [localEntries, setLocalEntries] = useState<LocalJournalEntry[]>([]);
   const [selectedEntry, setSelectedEntry] = useState<JournalEntry | LocalJournalEntry | null>(null);
@@ -76,7 +76,7 @@ const MobileJournal = () => {
   const [sortBy, setSortBy] = useState<'date' | 'title' | 'category'>('date');
   const [viewMode, setViewMode] = useState<'cloud' | 'local' | 'all'>('all');
 
-  // Load entries (same backend call as laptop)
+  // Load entries
   useEffect(() => {
     if (user) {
       loadEntries();
@@ -103,7 +103,7 @@ const MobileJournal = () => {
         throw error;
       }
       
-      // Ensure data has proper defaults for required fields (same as laptop)
+      // Ensure data has proper defaults for required fields
       const processedData = (data || []).map(entry => ({
         ...entry,
         verse_references: entry.verse_references || [],
