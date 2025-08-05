@@ -1,22 +1,21 @@
 {
   "name": "bible-aura-mobile",
   "private": true,
-  "version": "2.0.0",
+  "version": "3.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "dev:mobile": "vite --config vite.mobile.config.ts",
-    "build": "tsc && vite build",
-    "build:mobile": "tsc && vite build --config vite.mobile.config.ts",
-    "preview": "vite preview",
-    "preview:mobile": "vite preview --config vite.mobile.config.ts",
+    "dev": "vite --config vite.mobile.config.ts",
+    "build": "tsc && vite build --config vite.mobile.config.ts",
+    "preview": "vite preview --config vite.mobile.config.ts",
     "cap:add:android": "npx cap add android",
     "cap:add:ios": "npx cap add ios",
     "cap:sync": "npx cap sync",
     "cap:copy": "npx cap copy",
     "cap:open:android": "npx cap open android",
     "cap:open:ios": "npx cap open ios",
-    "mobile:setup": "npm run build:mobile && npx cap add android && npx cap add ios && npx cap sync"
+    "mobile:setup": "npm run build && npx cap add android && npx cap add ios && npx cap sync",
+    "android:build": "npm run build && npx cap copy && npx cap open android",
+    "android:dev": "npm run dev"
   },
   "dependencies": {
     "@capacitor/android": "^6.0.0",
